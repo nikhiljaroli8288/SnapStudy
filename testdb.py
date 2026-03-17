@@ -6,8 +6,8 @@ import certifi, uuid, os
 
 DB_ERROR_MSG = "Database is unreachable. Please check your MongoDB Atlas IP whitelist and cluster status."
 
-# MongoDB URI from environment variable (set in Vercel dashboard)
-MONGO_URI = os.environ.get("MONGO_URI", "")
+# MongoDB URI - uses environment variable on Vercel, fallback for local development
+MONGO_URI = os.environ.get("MONGO_URI") or "mongodb+srv://jarolinikhil:Nik%408288@snapstudy.6lzadkk.mongodb.net/?appName=SnapStudy"
 
 client = MongoClient(
     MONGO_URI,
