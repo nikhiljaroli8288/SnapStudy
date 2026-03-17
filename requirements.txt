@@ -1,0 +1,9 @@
+flask
+google-genai
+youtube-transcript-api
+pymongo[srv]
+certifi
+pypdf
+python-pptx
+dnspython
+werkzeug
