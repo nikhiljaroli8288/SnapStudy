@@ -9,7 +9,7 @@ from study_pack_ai import generate_study_pack
 from testdb import create_user, verify_user, save_history, get_history, save_study_data, load_study_data, find_study_data_by_url
 import re, os, uuid, threading, time, tempfile
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates", static_folder="static")
 app.secret_key = os.environ.get('SECRET_KEY', 'studysnap-secret-key-change-me')
 
 # ── Background Job Store ──────────────────────────────────────────────────
